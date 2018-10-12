@@ -1,0 +1,26 @@
+<view>
+  <view>
+   <!-- 拉流rtmp://1.119.195.59:1934/live/{{roomid}}-->
+    <live-player id="player" src="rtmp://192.168.43.218/live/{{roomid}}" mode="RTC" autoplay object-fit ="fillCrop" bindstatechange="statechange" binderror="error">
+   
+   <cover-view class="btn-area"> 
+   <cover-view bindtap='bindMute' class="page-body-button btn-mute">
+    <cover-image src="../../images/mute{{muteStatus}}.png" class="img-mute"></cover-image>
+  </cover-view> 
+    <cover-view bindtap='bindStop' class="page-body-button btn-stop">挂断</cover-view> 
+    <cover-view bindtap="bindSwitchCamera" class="page-body-button btn-camera">
+       <cover-image src="../../images/camera.png" class="img-camera"></cover-image>
+    </cover-view>      
+</cover-view>
+ </live-player> 
+  <!-- 推流rtmp://1.119.195.59:1934/live/{{openid}}--> 
+    <live-pusher id="pusher" url="rtmp://192.168.43.218/live/{{openid}}" mode="RTC" autopush bindstatechange="pushstatechange"  style="width:{{pusherwidth}};height:{{pusherheight}}">  
+   <cover-view class="btn-area" wx:if="{{isIconShow}}">  
+    <cover-view bindtap='bindStop' class="page-body-button btn-stop">挂断</cover-view>    
+</cover-view>
+ <cover-view class="fullscreen" catchtap='pusherFullScreen' bindtouchmove="touchMoveEvent"
+  style="width:{{fullscreenwidth}};height:{{fullscreenheight}};top:{{top}};right:{{right}}"></cover-view>
+  </live-pusher>      
+   
+  </view>
+</view>

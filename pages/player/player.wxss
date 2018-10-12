@@ -1,0 +1,74 @@
+
+live-player {
+  width: 100%;
+ height:100vh; 
+ position: absolute;
+  top:0px;
+  right:0px;
+}
+live-pusher{
+  width: 100px;
+ height:150px; 
+ position: absolute;
+ top:0px;
+ right:0px;
+
+}
+.top{
+  position: absolute;
+  top:4px;
+  right:4px;
+}
+.top cover-image{
+  width:80px;
+  height:80px;
+}
+.btn-area{
+  position:absolute;
+  bottom:30px;
+  width:100%;
+  height:60px;
+  display: flex;
+  justify-content:center;
+}
+.page-body-button {
+  width:60px;
+  height:60px;
+  line-height:60px;
+  text-align: center;
+font-size:12px;
+border-radius: 50%;
+background:rgba(0,0,0,0);
+color:#fff;
+}
+.btn-mute{
+  right:0px;
+}
+
+.btn-stop{ 
+  margin-left:60px;
+  margin-right:60px;
+  background:#e4393c;
+}
+.img-camera,.img-mute{
+  width:32px;
+  height:32px;
+  margin-top:12px;
+  margin-left:12px;
+}
+.top{
+  position: absolute;
+  top:4px;
+  right:4px;
+}
+.top cover-image{
+  width:80px;
+  height:80px;
+}
+.fullscreen{
+  position:absolute;
+  top:0;
+  right:0;
+  background:rgba(0,0,0,0);
+  
+}

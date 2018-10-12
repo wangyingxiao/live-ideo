@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="body">
+    <view class="row">   
+      <view class="col" bindtap='enterPlay' wx:for="{{playlist}}" wx:key="playlist" data-id="{{item.persons[0].id}}" data-roomid="{{item.id}}"> 
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <view class="col-inner">
+        <text class="toptext_play">直播</text>
+          <image class="user1"  src="../../images/2.jpg"></image>
+          <view class="bottomBox">
+          <image class="user2" src="../../images/my1.png"></image>
+
+            <text class="name" wx:for="{{item.persons}}" wx:for-item="items" wx:key="persons">{{items.name}}</text>
+            <text class="time">{{item.timestamp}}</text>
+          </view>
+        </view>
+        <text class="unit">单位:北京市朝阳消防大队</text>
+      </button>
+      </view>
+     
+       <!-- <view class="col" bindtap='enterPlay'>
+         <view class="col-inner">
+            <text class="toptext_turn">回放</text>
+            <image class="loading" src="../../images/live.png"></image>
+            <view class="loadtext">正在加载</view>
+            <view class="bottomBox">
+            <image class="user2" src="../../images/my1.png"></image>
+              <text class="name">孔亦菲</text>
+              <text class="time">2018-9-20</text>
+            </view>
+         </view>
+         <text class="unit">单位:北京市朝阳消防大队</text>
+      </view>  -->
+    </view>
+    <view class="hasdata" wx:if='{{!hasData}}'>暂无直播</view>
+<!-- 底部tab -->
+<button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <view class="icon_pusher_outer">
+        <view class="icon_pusher" bindtap="enterPush">
+         <image src="../../images/live4.png"></image>
+       <!-- <text class="text_pusher">我要直播</text>  -->
+       </view>
+      </view>
+</button>
+
+
+
+</view>
+
