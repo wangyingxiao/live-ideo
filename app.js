@@ -35,12 +35,12 @@ App({
   },
   globalData: {
     userInfo: null,
-    token:"14_dcvCA9xAMfLvbB0Ii3c3rhfPIs-Qct2qHPshTLW3bXeKUxPbGjpnqfqmPUUyIIvw_mnbkhbRgec-jxpprt3F_Nhi-AmaRRwYinZxgp8M-aW-zwAkWBsn0aQ-woIQZMgAIAENA",
+    token:"",
     openid:"",
     formId:"" ,
     ip:"http://222.41.112.179:8080/rtmpweb/",
-    appid:"wxb8648e2977ef9b62",
-    secret:"a55dafecd613c41b312aef1767fdc93b",
+    appid:"****",//小程序的appid
+    secret:"****",//小程序的scret.可在微信后台管理获取
     roomid:""
   }
 })
